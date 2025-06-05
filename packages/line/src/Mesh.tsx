@@ -49,7 +49,7 @@ const NonMemoizedMesh = <Series extends LineSeries>({
         (point: Point<Series>, event: MouseEvent) => {
             showTooltipAt(
                 createElement(tooltip, { point }),
-                [point.x + margin.left, point.y + margin.top],
+                [point?.x + margin.left, point?.y + margin.top],
                 'top'
             )
             onMouseEnter?.(point, event)
